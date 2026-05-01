@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Max Lash · Rusmeri Cárdenas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+/* ============================================================
+   ESTILOS DE PÁGINA - Proyecto Max Lash
+   ============================================================ */
+
+/* --- 1. REELS (Mockup de celular) --- */
+.fila-celulares {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+}
+
+.contenedor-celular {
+    width: 240px;
+    height: 490px;
+    background: #000;
+    border: 10px solid #1a1a1a;
+    border-radius: 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.22);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenedor-celular:hover {
+    transform: translateY(-4px);
+    box-shadow: 0px 18px 40px rgba(0,0,0,0.28);
+}
+
+.contenedor-celular video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 18px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 5;
+}
+
+@media (max-width: 768px) {
+    .contenedor-celular {
+        width: 180px;
+        height: 370px;
+    }
+}
+
+/* --- 2. MEDIA CAROUSEL — sistema unificado para imágenes y videos cuadrados --- */
+.media-carousel-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: visible;
+    padding: 16px 0 24px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+
+.media-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.media-carousel-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.media-carousel-track {
+    display: flex;
+    gap: 18px;
+    flex-wrap: nowrap;
+    padding: 8px 4px;
+    width: max-content;
+}
+
+/* Cuando hay pocos items (ej: lash con 3 videos), centrarlos */
+.media-carousel-track.centrado {
+    width: max-content;
+    margin: 0 auto;
+}
+
+.media-card {
+    width: 300px;
+    min-width: 300px;
+    max-width: 300px;
+    height: 300px;
+    flex: 0 0 300px;
+    background: #111;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.13);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.media-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(0,0,0,0.2);
+}
+
+.media-card img,
+.media-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.scroll-hint {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 6px;
+    letter-spacing: 0.3px;
+    font-family: 'DM Sans', sans-serif;
+    user-select: none;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+  <a href="index.html" class="nav-logo">Rusmeri</a>
+  <ul class="nav-links">
+    <li><a href="index.html#proyectos" class="nav-main-link">Proyectos</a></li>
+    <li><a href="index.html#experiencia" class="nav-main-link">Experiencia</a></li>
+    <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
+    <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">Descargar CV</a>
+</nav>
+
+<!-- CONTENIDO DEL PROYECTO -->
+<div class="project-page">
+  
+  <!-- HERO DEL PROYECTO -->
+  <section style="background: linear-gradient(135deg, #f5f0e8 0%, #ede8df 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
+    <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: var(--navy-mid); border: 1px solid var(--navy-mid); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
+    <img src="assets/maxlash.webp" alt="Max Lash" style="max-height: 250px; max-width: 400px; object-fit: contain; margin-bottom: 2rem;">
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--navy); text-align: center;">Max Lash</h1>
+    <p style="color: var(--text-mid); font-size: 13px; text-align: center; margin-top: 0.5rem;">Estrategia Premium & Posicionamiento · 8 Mar Agencia</p>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section style="padding: 3rem 2.5rem; max-width: 900px; margin: 0 auto;">
+    <div style="background: var(--cream-light); border: 1px solid var(--cream-dark); border-radius: 14px; padding: 2.5rem; line-height: 1.8;">
+      <p style="font-size: 16px; color: var(--text-dark); margin-bottom: 1.2rem; text-align: justify;">
+        Max Lash es una marca peruana especializada en el cuidado de pestañas y cejas. Para potenciar su presencia digital, trabajé una estrategia con dos enfoques: aumentar su recordación y reforzar su imagen como un servicio premium. Mi rol fue diseñar y ejecutar la estrategia de contenido para sus redes y otros canales. Esto incluyó, crear pilares de contenido enfocados en educación, cuidado y experiencia de servicio. Definir un tono escrito que reflejara exclusividad y calidad. Proponer formatos que aumentaran la interacción y la conexión con la audiencia. Los resultados principales fueron, mayor interacción, una comunidad más activa y un posicionamiento sólido como marca de tratamientos de belleza exclusivo. También se logró una presencia digital fuerte, logrando que Max Lash permanezca en el "top of mind" del público en su categoría.
+      </p>
+    </div>
+
+    <!-- Sección: Max Lash - Reels -->
+    <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Max Lash - Reels</h3>
+
+    <section class="fila-celulares">
+        <div class="contenedor-celular">
+            <div class="notch"></div>
+            <video autoplay muted loop playsinline>
+                <source src="assets/max1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="contenedor-celular">
+            <div class="notch"></div>
+            <video autoplay muted loop playsinline>
+                <source src="assets/max2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="contenedor-celular">
+            <div class="notch"></div>
+            <video autoplay muted loop playsinline>
+                <source src="assets/max3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <!-- Sección: Max Lash - Social Media -->
+    <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 20px;">Max Lash - Social Media</h3>
+
+    <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin: 2.5rem 0;">
+        <div class="media-card">
+            <video autoplay muted loop playsinline>
+                <source src="assets/lash1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="media-card">
+            <video autoplay muted loop playsinline>
+                <source src="assets/lash2.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="media-card">
+            <video autoplay muted loop playsinline>
+                <source src="assets/lash3.mp4" type="video/mp4">
+            </video>
+        </div>
+    </div>
+
+    <!-- TAGS DE PROYECTO -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2rem;">
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--navy); color: var(--blue-soft);">Copy</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Premium</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Belleza</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Posicionamiento</span>
+    </div>
+
+    <!-- CTA VOLVER -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-dark); text-align: center;">
+      <a href="index.html#proyectos" style="display: inline-block; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 500; padding: 10px 22px; border-radius: 999px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s;">Explorar más proyectos</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

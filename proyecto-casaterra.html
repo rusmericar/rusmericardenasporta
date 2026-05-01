@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <style>
+/* Estilos para los mockups de celular */
+.fila-celulares {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 4rem 0;
+}
+
+.contenedor-celular {
+    width: 240px; 
+    height: 490px;
+    background: #000;
+    border: 10px solid #1a1a1a;
+    border-radius: 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+.contenedor-celular video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.notch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 18px;
+    background: #1a1a1a;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    z-index: 5;
+}
+
+/* Ajuste para que se vea bien en celulares reales */
+@media (max-width: 768px) {
+    .contenedor-celular {
+        width: 180px; 
+        height: 370px;
+    }
+}/* --- Estilos del Carrusel de IG --- */
+.seccion-carrusel {
+    padding: 40px 0;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carrusel-track {
+    display: flex;
+    overflow-x: auto; 
+    scroll-snap-type: x mandatory; 
+    gap: 15px;
+    padding: 10px;
+    scrollbar-width: none; 
+    -webkit-overflow-scrolling: touch; 
+}
+
+.carrusel-track::-webkit-scrollbar {
+    display: none; 
+}
+
+.carrusel-item {
+    flex: 0 0 75%; 
+    scroll-snap-align: center;
+}
+
+.carrusel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+@media (min-width: 768px) {
+    .carrusel-item {
+        flex: 0 0 300px; 
+    }
+}
+</style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Casaterra · Rusmeri Cárdenas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+  <a href="index.html" class="nav-logo">Rusmeri</a>
+  <ul class="nav-links">
+    <li><a href="index.html#proyectos" class="nav-main-link">Proyectos</a></li>
+    <li><a href="index.html#experiencia" class="nav-main-link">Experiencia</a></li>
+    <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
+    <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">Descargar CV</a>
+</nav>
+
+<!-- CONTENIDO DEL PROYECTO -->
+<div class="project-page">
+  
+  <!-- HERO DEL PROYECTO -->
+  <section style="background: linear-gradient(135deg, #1e3a6e 0%, #2d5082 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
+    <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: rgba(245,240,232,0.8); border: 1px solid rgba(245,240,232,0.25); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
+    <img src="assets/casaterra.webp" alt="CasaTerra" style="max-height: 250px; max-width: 400px; object-fit: contain; margin-bottom: 2rem;">
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--cream); text-align: center;">Casaterra</h1>
+    <p style="color: rgba(245,240,232,0.6); font-size: 13px; text-align: center; margin-top: 0.5rem;">Estrategia Orgánica Meta & TikTok · Agencia Eunoia</p>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section style="padding: 3rem 2.5rem; max-width: 900px; margin: 0 auto;">
+    <div style="background: var(--cream-light); border: 1px solid var(--cream-dark); border-radius: 14px; padding: 2.5rem; line-height: 1.8;">
+      <p style="font-size: 16px; color: var(--text-dark); margin-bottom: 1.2rem; text-align: justify;">
+        Casaterra es una inmobiliaria chilena con un público definido: jóvenes y familias que están en la búsqueda de su primera propiedad. Para conectar con ellos, convertí la información inmobiliaria —normalmente densa, fría y llena de tecnicismos— en contenido cercano, útil y altamente compartible. Partí de insights reales: sus dudas, temores y motivaciones. Luego lo fusioné con trends, formatos dinámicos y una narrativa más humana, logrando que temas complejos fluyeran naturalmente en el feed. Y cuando tocaba hablar de ventas, se hizo con estrategia: sin urgencias forzadas, mostrando valor, aclarando procesos y guiando de forma clara. Resultado: mayor crecimiento de comunidad, más interacción y un aumento sólido en leads calificados.
+      </p>
+    </div>
+
+    <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels</h3>
+<section class="fila-celulares">
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline>
+            <source src="assets/casaterra venta.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline>
+            <source src="assets/casaterrapie.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline>
+            <source src="assets/casaterraprovidencia.mp4" type="video/mp4">
+        </video>
+    </div>
+    <!-- Carrusel de Contenidos Casaterra -->
+<section class="seccion-carrusel">
+    <h3 style="text-align: center; color: var(--text-dark); margin-bottom: 20px;">Carruseles</h3>
+    <div class="carrusel-track">
+        <div class="carrusel-item"><img src="assets/casaterra1.jpg" alt="Post Casaterra 1"></div>
+        <div class="carrusel-item"><img src="assets/casaterra2.jpg" alt="Post Casaterra 2"></div>
+        <div class="carrusel-item"><img src="assets/casaterra3.jpg" alt="Post Casaterra 3"></div>
+        <div class="carrusel-item"><img src="assets/casaterra4.jpg" alt="Post Casaterra 4"></div>
+        <div class="carrusel-item"><img src="assets/casaterra5.jpg" alt="Post Casaterra 5"></div>
+        <div class="carrusel-item"><img src="assets/casaterra6.jpg" alt="Post Casaterra 6"></div>
+    </div>
+    <p style="text-align: center; font-size: 13px; color: #888; margin-top: 15px;">← Desliza para ver más →</p>
+</section>
+</section>
+    <!-- TAGS DE PROYECTO -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2rem;">
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Instagram</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">TikTok</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--navy); color: var(--blue-soft);">Estrategia de Contenido</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Social Listening</span>
+    </div>
+
+    <!-- CTA VOLVER -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-dark); text-align: center;">
+      <a href="index.html#proyectos" style="display: inline-block; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 500; padding: 10px 22px; border-radius: 999px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s;">Explorar más proyectos</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

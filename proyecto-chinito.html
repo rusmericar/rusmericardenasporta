@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto El Chinito · Rusmeri Cárdenas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+
+<style>
+/* ============================================================
+   ESTILOS DE PÁGINA - Proyecto El Chinito
+   ============================================================ */
+
+/* --- GALERÍA DE PRESENTACIÓN VERTICAL --- */
+.galeria-presentacion {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.galeria-presentacion img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(30, 58, 110, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    object-fit: cover;
+}
+
+.galeria-presentacion img:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(30, 58, 110, 0.18);
+}
+
+@media (max-width: 768px) {
+    .galeria-presentacion {
+        gap: 16px;
+        max-width: 100%;
+    }
+    
+    .galeria-presentacion img {
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .galeria-presentacion {
+        gap: 12px;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+  <a href="index.html" class="nav-logo">Rusmeri</a>
+  <ul class="nav-links">
+    <li><a href="index.html#proyectos" class="nav-main-link">Proyectos</a></li>
+    <li><a href="index.html#experiencia" class="nav-main-link">Experiencia</a></li>
+    <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
+    <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">Descargar CV</a>
+</nav>
+
+<!-- CONTENIDO DEL PROYECTO -->
+<div class="project-page">
+  
+  <!-- HERO DEL PROYECTO -->
+  <section style="background: linear-gradient(135deg, #2d5082 0%, #1e3a6e 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
+    <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: rgba(245,240,232,0.8); border: 1px solid rgba(245,240,232,0.25); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
+    <img src="assets/chinito.webp" alt="El Chinito" style="max-height: 250px; max-width: 400px; object-fit: contain; margin-bottom: 2rem;">
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--cream); text-align: center;">El Chinito Sanguchería</h1>
+    <p style="color: rgba(245,240,232,0.6); font-size: 13px; text-align: center; margin-top: 0.5rem;">Proyecto de Rebranding</p>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section style="padding: 3rem 2.5rem; max-width: 1000px; margin: 0 auto;">
+    <div style="background: var(--cream-light); border: 1px solid var(--cream-dark); border-radius: 14px; padding: 2.5rem; line-height: 1.8; margin-bottom: 3rem;">
+      <p style="font-size: 16px; color: var(--text-dark); margin-bottom: 1.2rem; text-align: justify;">
+        Proyecto de rebranding. Con más de 60 años de trayectoria, El Chinito Sanguchería es un pilar de la gastronomía limeña. No obstante, frente a un mercado altamente competitivo y visual, renovar su identidad es clave para mantener su relevancia. Este proyecto propone una evolución gráfica que proyecta el valor real de la marca, equilibrando su legado artesanal con una estética contemporánea. Todo bajo el concepto rector: 'Tradición que despierta el sabor'.
+      </p>
+    </div>
+
+    <!-- GALERÍA DE PRESENTACIÓN -->
+    <div class="galeria-presentacion">
+        <img src="assets/chinito1.png" alt="El Chinito - Presentación 1">
+        <img src="assets/chinito2.png" alt="El Chinito - Presentación 2">
+        <img src="assets/chinito3.png" alt="El Chinito - Presentación 3">
+        <img src="assets/chinito4.png" alt="El Chinito - Presentación 4">
+        <img src="assets/chinito5.png" alt="El Chinito - Presentación 5">
+        <img src="assets/chinito6.png" alt="El Chinito - Presentación 6">
+        <img src="assets/chinito7.png" alt="El Chinito - Presentación 7">
+        <img src="assets/chinito8.png" alt="El Chinito - Presentación 8">
+        <img src="assets/chinito9.png" alt="El Chinito - Presentación 9">
+        <img src="assets/chinito10.png" alt="El Chinito - Presentación 10">
+        <img src="assets/chinito11.png" alt="El Chinito - Presentación 11">
+        <img src="assets/chinito12.png" alt="El Chinito - Presentación 12">
+    </div>
+
+    <!-- TAGS DE PROYECTO -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 3rem;">
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Rebranding</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Diseño</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Identidad Visual</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Gastronomía</span>
+    </div>
+
+    <!-- CTA VOLVER -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-dark); text-align: center;">
+      <a href="index.html#proyectos" style="display: inline-block; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 500; padding: 10px 22px; border-radius: 999px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s;">Explorar más proyectos</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

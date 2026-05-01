@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<style>
+    /* 1. CONTENEDOR REELS (Celulares verticales) */
+    .fila-celulares {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px; /* Separación amplia para que cada reel respire */
+        flex-wrap: nowrap; /* Fuerza la línea horizontal */
+        margin: 4rem auto;
+        width: 100%;
+    }
+
+    .contenedor-celular {
+        width: 230px; /* Ajustado ligeramente para compensar el gap más grande */
+        min-width: 230px; 
+        height: 470px;
+        background: #000;
+        border: 10px solid #1a1a1a;
+        border-radius: 36px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .contenedor-celular video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* 2. CONTENEDOR REELS CUADRADOS (Deli Kranch) */
+    .grilla-posts {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: nowrap;
+        margin: 3rem 0;
+        width: 100%;
+    }
+
+    .contenedor-post-cuadrado {
+        width: 320px;
+        min-width: 320px;
+        height: 320px;
+        background: #000;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+
+    .contenedor-post-cuadrado video {
+        width: 100%;
+        height: 100%;
+        /* 'contain' para no cortar el logo ni los octógonos */
+        object-fit: contain; 
+    }
+
+    /* DETALLES DE DISEÑO */
+    .notch {
+        position: absolute;
+        top: 0; left: 50%;
+        transform: translateX(-50%);
+        width: 80px; height: 16px;
+        background: #1a1a1a;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        z-index: 5;
+    }
+
+    h3 {
+        font-family: sans-serif;
+        text-align: center;
+        color: #002b4e;
+        margin-top: 2rem;
+        font-weight: bold;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1000px) {
+        .fila-celulares, .grilla-posts {
+            flex-wrap: wrap;
+            gap: 20px; /* En móvil se reduce el espacio para que no se vea vacío */
+        }
+    }
+</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Delikrach · Rusmeri Cárdenas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+  <a href="index.html" class="nav-logo">Rusmeri</a>
+  <ul class="nav-links">
+    <li><a href="index.html#proyectos" class="nav-main-link">Proyectos</a></li>
+    <li><a href="index.html#experiencia" class="nav-main-link">Experiencia</a></li>
+    <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
+    <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
+  </ul>
+  <a href="index.html" class="nav-cta">Descargar CV</a>
+</nav>
+
+<!-- CONTENIDO DEL PROYECTO -->
+<div class="project-page">
+  
+  <!-- HERO DEL PROYECTO -->
+  <section style="background: linear-gradient(135deg, #e4edf8 0%, #c8d9f0 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
+    <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: var(--navy-mid); border: 1px solid var(--navy-mid); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
+    <img src="assets/ism.webp" alt="ISM" style="max-height: 250px; max-width: 400px; object-fit: contain; margin-bottom: 2rem;">
+    <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--navy); text-align: center;">Delikrach</h1>
+    <p style="color: var(--text-mid); font-size: 13px; text-align: center; margin-top: 0.5rem;">Lanzamiento Digital & Posicionamiento · Industrias San Miguel</p>
+  </section>
+
+  <!-- CONTENIDO -->
+  <section style="padding: 3rem 2.5rem; max-width: 900px; margin: 0 auto;">
+    <div style="background: var(--cream-light); border: 1px solid var(--cream-dark); border-radius: 14px; padding: 2.5rem; line-height: 1.8;">
+      <p style="font-size: 16px; color: var(--text-dark); margin-bottom: 1.2rem; text-align: justify;">
+        Delikrach es una nueva marca peruana de cereales lanzada por Industrias San Miguel. Mi misión fue acompañar su llegada al mercado creando una identidad digital fresca, clara y alineada a su propuesta de marca, capaz de conectar con su público desde el primer día. Desarrollé una estrategia basada en pilares de contenido y un copywriting coherente y atractivo, logrando una grilla ordenada, visualmente sólida y con un estilo reconocible. El crecimiento fue mayormente orgánico (alrededor del 85%) y los resultados se dieron rápido: pasamos de 0 a más de 2,000 seguidores en Instagram y cerca de 7,700 en Facebook. El resultado fue una presencia digital dinámica, cercana y en constante crecimiento, con una audiencia que conectó de manera natural desde el inicio.
+      </p>
+    </div>
+<!-- Solo asegúrate de que los 3 estén dentro del mismo contenedor <section> -->
+<h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels</h3>
+<section class="fila-celulares">
+    <!-- Reel 1 -->
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline><source src="assets/deli1.mp4" type="video/mp4"></video>
+    </div>
+    
+    <!-- Reel 2 -->
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline><source src="assets/deli2.mp4" type="video/mp4"></video>
+    </div>
+    
+    <!-- Reel 3 -->
+    <div class="contenedor-celular">
+        <div class="notch"></div>
+        <video autoplay muted loop playsinline><source src="assets/deli3.mp4" type="video/mp4"></video>
+    </div>
+</section>
+
+<!-- REELS CUADRADOS -->
+<h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels cuadrados</h3>
+<section class="grilla-posts">
+    <div class="contenedor-post-cuadrado">
+        <video autoplay muted loop playsinline><source src="assets/delivideo1.mp4" type="video/mp4"></video>
+    </div>
+    <div class="contenedor-post-cuadrado">
+        <video autoplay muted loop playsinline><source src="assets/delivideo2.mp4" type="video/mp4"></video>
+    </div>
+    <div class="contenedor-post-cuadrado">
+        <video autoplay muted loop playsinline><source src="assets/delivideo3.mp4" type="video/mp4"></video>
+    </div>
+</section>
+    <!-- TAGS DE PROYECTO -->
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2rem;">
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Lanzamiento</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Crecimiento Orgánico</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Instagram</span>
+      <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Facebook</span>
+    </div>
+
+    <!-- CTA VOLVER -->
+    <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-dark); text-align: center;">
+      <a href="index.html#proyectos" style="display: inline-block; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 500; padding: 10px 22px; border-radius: 999px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s;">Explorar más proyectos</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
