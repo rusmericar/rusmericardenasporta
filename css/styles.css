@@ -21,13 +21,13 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text-dark); }
+body { font-family: 'DM Sans', sans-serif; background: #f5f0e8; color: var(--text-dark); }
 
 /* ── NAV ── */
 nav {
   display: flex; justify-content: space-between; align-items: center;
   padding: 1rem 2.5rem;
-  background: var(--cream);
+  background: #f5f0e8;
   border-bottom: 1px solid var(--cream-dark);
   position: sticky; top: 0; z-index: 100;
   /* Necesario para anclar el dropdown al nav */
@@ -120,13 +120,14 @@ nav {
 /* ── HERO ── */
 .hero {
   display: grid; grid-template-columns: 1.1fr 0.9fr;
-  min-height: 420px;
+  min-height: 100px;
+  position: relative;
 }
 .hero-left {
   background: var(--navy);
   padding: 3.5rem 3rem;
   display: flex; flex-direction: column; justify-content: center;
-  position: relative; overflow: hidden;
+  position: relative; overflow: visible;
 }
 .hero-left::before {
   content: 'R';
@@ -267,14 +268,49 @@ nav {
 }
 
 /* ── GRID PROYECTOS (estilo Pinterest) ── */
-.pinterest-grid { columns: 3; gap: 10px; }
+.pinterest-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px; 
+    justify-content: center; 
+    padding: 40px 0%; /* Añadimos un poco de espacio a los lados */
+    width: 100%;    /* Ocupa todo el ancho disponible */
+    max-width: 100%; /* Elimina cualquier restricción de tamaño */
+    background-color: #f5f0e8;
+}
+/* 1. EL CUERPO DE LA TARJETA (TU FOLIO) */
 .project-card {
-  break-inside: avoid; margin-bottom: 10px;
-  border-radius: 14px; overflow: hidden;
-  background: var(--cream-light);
-  border: 1px solid var(--cream-dark);
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    width: calc(33.33% - 20px); /* Todas las carpetas del mismo ancho para que se vea ordenado */
+    margin-top: 20px;
+    border-radius: 0 14px 14px 14px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    
+    /* CAMBIO CLAVE: Cambia hidden por visible */
+    overflow: visible; 
+    
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* 2. LA PESTAÑA DEL FOLIO (LA SOLAPA SUPERIOR) */
+.project-card::before {
+    content: "";
+    position: absolute;
+    top: -15px; 
+    left: 0;
+    width: 100px; 
+    height: 15px;
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: none; 
+    border-radius: 10px 10px 0 0; 
+    z-index: 10;
 }
 .project-card:hover {
   transform: translateY(-3px);
@@ -318,7 +354,7 @@ nav {
 .exp-section {
   background: var(--cream-dark);
   padding: 2.5rem 2.5rem;
-  border-top: 1px solid #ddd8ce;
+  border-top: none;
 }
 .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .exp-card {
@@ -354,7 +390,7 @@ nav {
 /* ── SOBRE MÍ ── */
 .about-section {
   background: var(--navy);
-  padding: 3rem 2.5rem;
+  padding: 1rem 2.5rem;
   display: grid; grid-template-columns: auto 1fr;
   gap: 3rem; align-items: center;
 }
@@ -437,11 +473,21 @@ footer span { font-size: 11px; color: rgba(255,255,255,0.3); }
 
 /* ── ONDAS ── */
 .wave-divider {
-  display: block; width: 100%;
-  overflow: hidden; line-height: 0;
-  margin: 0; padding: 0;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f0e8;
+  margin-bottom: -1px; /* ESTO CIERRA LA GRIETA BLANCA */
 }
-.wave-divider svg { display: block; width: 100%; }
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 100px;
+}
 
 /* ── ANIMACIONES DE SCROLL ── */
 .reveal {
