@@ -276,7 +276,7 @@
   const videos = document.querySelectorAll('.video-portafolio');
 
   videos.forEach(video => {
-    // --- COMPORTAMIENTO EN COMPUTADORA ---
+    // --- COMPORTAMIENTO EN COMPUTADORA (Se queda exactamente igual) ---
     video.addEventListener('mouseenter', () => {
       if (window.innerWidth > 768) {
         video.play();
@@ -289,21 +289,19 @@
       }
     });
 
-    // --- COMPORTAMIENTO EN CELULAR ---
+    // --- COMPORTAMIENTO EN CELULAR (Un toque reproduce, otro toque pausa) ---
     video.addEventListener('touchstart', (e) => {
       if (window.innerWidth <= 768) {
-        video.play();
-      }
-    });
-
-    video.addEventListener('touchend', () => {
-      if (window.innerWidth <= 768) {
-        video.pause();
+        // Bloquea los eventos fantasma del mouse en el celular
+        e.preventDefault(); 
+        
+        // Si está pausado, dale play. Si está reproduciendo, ponle pausa.
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
       }
     });
   });
 </script>
-
-<script src="js/main.js"></script>
-</body>
-</html>
