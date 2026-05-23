@@ -44,6 +44,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .notch {
@@ -60,9 +61,21 @@
 }
 
 @media (max-width: 768px) {
+    .fila-celulares {
+        gap: 20px; /* Reduce espacio en celulares para que entren mejor */
+        margin: 2rem 0;
+    }
     .contenedor-celular {
-        width: 180px;
-        height: 370px;
+        width: 160px;   /* Se acopla perfectamente a pantallas chicas */
+        height: 325px;
+        border: 6px solid #1a1a1a; /* Borde más fino y elegante en móvil */
+        border-radius: 24px;
+    }
+    .notch {
+        width: 70px;
+        height: 12px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
     }
 }
 
@@ -93,7 +106,6 @@
     width: max-content;
 }
 
-/* Cuando hay pocos items (ej: KR con 3 videos), centrarlos */
 .media-carousel-track.centrado {
     width: max-content;
     margin: 0 auto;
@@ -140,7 +152,6 @@
 </head>
 <body>
 
-<!-- NAVEGACIÓN -->
 <nav>
   <a href="index.html" class="nav-logo">Rusmeri</a>
   <ul class="nav-links">
@@ -149,20 +160,15 @@
     <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
     <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
   </ul>
-
-
-<!-- CONTENIDO DEL PROYECTO -->
-<div class="project-page">
+</nav> <div class="project-page">
   
-  <!-- HERO DEL PROYECTO -->
   <section style="background: linear-gradient(135deg, #c8d9f0 0%, #e4edf8 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
     <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: var(--navy-mid); border: 1px solid var(--navy-mid); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
     <img src="assets/aje.webp" alt="Aje" style="max-height: 250px; max-width: 400px; object-fit: contain; margin-bottom: 2rem;">
     <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 600; color: var(--navy); text-align: center;">AJE</h1>
-    <p style="color: var(--text-mid); font-size: 13px; text-align: center; margin-top: 0.5rem;">Insigths del consumidor y Contenido Multiplataforma · Agencia D.O </p>
+    <p style="color: var(--text-mid); font-size: 13px; text-align: center; margin-top: 0.5rem;">Insights del consumidor y Contenido Multiplataforma · Agencia D.O </p>
   </section>
 
-  <!-- CONTENIDO -->
   <section style="padding: 3rem 2.5rem; max-width: 900px; margin: 0 auto;">
     <div style="background: var(--cream-light); border: 1px solid var(--cream-dark); border-radius: 14px; padding: 2.5rem; line-height: 1.8;">
       <p style="font-size: 16px; color: var(--text-dark); margin-bottom: 1.2rem; text-align: justify;">
@@ -170,52 +176,29 @@
       </p>
     </div>
 
-    <!-- Sección: Sabor de Oro - Reels -->
     <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Sabor de Oro - Reels</h3>
 
     <section class="fila-celulares">
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video 
-  id="oro1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/oro1.mp4#t=0.001" type="video/mp4">
-</video>
-</div>
-        <div class="contenedor-celular">
-            <div class="notch"></div>
-            <video 
-  id="oro2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-<source src="assets/oro2.mp4#t=0.001" type="video/mp4">
+            <video id="oro1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+                <source src="assets/oro1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video 
-  id="oro3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-<source src="assets/oro3.mp4#t=0.001" type="video/mp4">
+            <video id="oro2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+                <source src="assets/oro2.mp4#t=0.001" type="video/mp4">
+            </video>
+        </div>
+        <div class="contenedor-celular">
+            <div class="notch"></div>
+            <video id="oro3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+                <source src="assets/oro3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
     </section>
 
-    <!-- Sección: Sabor de Oro - Post cuadrados -->
     <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 20px;">Sabor de Oro - Post cuadrados</h3>
 
     <div class="media-carousel-wrapper">
@@ -229,98 +212,49 @@
     </div>
     <p class="scroll-hint">← Desliza para ver más →</p>
 
-    <!-- Sección: Kr - Reels -->
     <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Kr - Reels</h3>
 
     <section class="fila-celulares">
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video 
-  id="kr1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
+            <video id="kr1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kr1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video 
-  id="kr2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
+            <video id="kr2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kr2.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video 
-  id="kr3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
+            <video id="kr3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kr3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
     </section>
 
-    <!-- Sección: KR - Post cuadrados -->
     <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 20px;">KR - Post cuadrados</h3>
 
     <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin: 2.5rem 0;">
         <div class="media-card">
-            <video 
-  id="kola1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
+            <video id="kola1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kola1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="media-card">
-            <video 
-  id="kola2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/kola2.mp4#t=0.001" type="video/mp4">
-</video>
+            <video id="kola2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kola2.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="media-card">
-            <video 
-  id="kola3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/kola3.mp4#t=0.001" type="video/mp4">
-</video>
+            <video id="kola3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
                 <source src="assets/kola3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
     </div>
 
-    <!-- TAGS DE PROYECTO -->
     <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2rem;">
       <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Guiones</span>
       <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--blue-pastel); color: var(--navy-mid);">Contenido Multiplataforma</span>
@@ -328,7 +262,6 @@
       <span style="font-size: 10px; padding: 5px 13px; border-radius: 999px; background: var(--cream-dark); color: var(--text-mid);">Benchmarking</span>
     </div>
 
-    <!-- CTA VOLVER -->
     <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--cream-dark); text-align: center;">
       <a href="index.html#proyectos" style="display: inline-block; background: var(--navy); color: var(--cream); font-size: 12px; font-weight: 500; padding: 10px 22px; border-radius: 999px; border: none; cursor: pointer; font-family: 'DM Sans', sans-serif; text-decoration: none; transition: opacity 0.2s;">Explorar más proyectos</a>
     </div>
