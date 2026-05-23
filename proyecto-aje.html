@@ -62,13 +62,13 @@
 
 @media (max-width: 768px) {
     .fila-celulares {
-        gap: 20px; /* Reduce espacio en celulares para que entren mejor */
+        gap: 20px;
         margin: 2rem 0;
     }
     .contenedor-celular {
-        width: 160px;   /* Se acopla perfectamente a pantallas chicas */
+        width: 160px;
         height: 325px;
-        border: 6px solid #1a1a1a; /* Borde más fino y elegante en móvil */
+        border: 6px solid #1a1a1a;
         border-radius: 24px;
     }
     .notch {
@@ -160,7 +160,10 @@
     <li><a href="index.html#sobre-mi" class="nav-main-link">Sobre mí</a></li>
     <li><a href="index.html#contacto" class="nav-main-link">Contacto</a></li>
   </ul>
-</nav> <div class="project-page">
+</nav>
+
+
+<div class="project-page">
   
   <section style="background: linear-gradient(135deg, #c8d9f0 0%, #e4edf8 100%); padding: 3rem 2.5rem; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 400px;">
     <a href="index.html#proyectos" style="align-self: flex-start; background: transparent; color: var(--navy-mid); border: 1px solid var(--navy-mid); font-size: 12px; font-family: 'DM Sans', sans-serif; padding: 7px 16px; border-radius: 999px; cursor: pointer; width: fit-content; transition: background 0.2s, color 0.2s; letter-spacing: 0.2px; text-decoration: none; margin-bottom: 2rem;">← Volver</a>
@@ -181,19 +184,19 @@
     <section class="fila-celulares">
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="oro1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="oro1" preload="metadata" muted playsinline loop>
                 <source src="assets/oro1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="oro2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="oro2" preload="metadata" muted playsinline loop>
                 <source src="assets/oro2.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="oro3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="oro3" preload="metadata" muted playsinline loop>
                 <source src="assets/oro3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
@@ -217,19 +220,19 @@
     <section class="fila-celulares">
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="kr1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kr1" preload="metadata" muted playsinline loop>
                 <source src="assets/kr1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="kr2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kr2" preload="metadata" muted playsinline loop>
                 <source src="assets/kr2.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="contenedor-celular">
             <div class="notch"></div>
-            <video id="kr3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kr3" preload="metadata" muted playsinline loop>
                 <source src="assets/kr3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
@@ -239,17 +242,17 @@
 
     <div style="display: flex; justify-content: center; gap: 18px; flex-wrap: wrap; margin: 2.5rem 0;">
         <div class="media-card">
-            <video id="kola1" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kola1" preload="metadata" muted playsinline loop>
                 <source src="assets/kola1.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="media-card">
-            <video id="kola2" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kola2" preload="metadata" muted playsinline loop>
                 <source src="assets/kola2.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
         <div class="media-card">
-            <video id="kola3" preload="metadata" muted playsinline loop onmouseenter="this.play()" onmouseleave="this.pause()" ontouchstart="this.play()" ontouchend="this.pause()">
+            <video class="video-portafolio" id="kola3" preload="metadata" muted playsinline loop>
                 <source src="assets/kola3.mp4#t=0.001" type="video/mp4">
             </video>
         </div>
@@ -268,6 +271,38 @@
   </section>
 
 </div>
+
+<script>
+  const videos = document.querySelectorAll('.video-portafolio');
+
+  videos.forEach(video => {
+    // --- COMPORTAMIENTO EN COMPUTADORA ---
+    video.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768) {
+        video.play();
+      }
+    });
+
+    video.addEventListener('mouseleave', () => {
+      if (window.innerWidth > 768) {
+        video.pause();
+      }
+    });
+
+    // --- COMPORTAMIENTO EN CELULAR ---
+    video.addEventListener('touchstart', (e) => {
+      if (window.innerWidth <= 768) {
+        video.play();
+      }
+    });
+
+    video.addEventListener('touchend', () => {
+      if (window.innerWidth <= 768) {
+        video.pause();
+      }
+    });
+  });
+</script>
 
 <script src="js/main.js"></script>
 </body>
