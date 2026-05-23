@@ -683,11 +683,19 @@ footer span { font-size: 11px; color: rgba(255,255,255,0.3); }
   .hero-left { padding: 2.5rem 1.5rem; }
   .hero-left h1 { font-size: 2.2rem; }
   
-  /* AQUÍ ESTÁ EL CAMBIO CLAVE: Obliga a las tarjetas a ponerse una abajo de la otra */
+  /* ARREGLO DE RAÍZ: Apaga las columnas de periódico y limpia el diseño */
   .pinterest-grid { 
-    display: flex;
-    flex-direction: column;
-    gap: 24px; /* Espacio ordenado y elegante entre cada proyecto */
+    display: block !important;
+    columns: auto !important;        /* Borra el sistema de 3 columnas */
+    column-count: auto !important;   /* Asegura el apagado en Safari/iPhones */
+    width: 100% !important;
+  }
+  
+  /* Obliga a cada tarjeta a ser ancha y ponerse una abajo de otra */
+  .project-card {
+    display: block !important;
+    width: 100% !important;          /* Ocupa todo el ancho disponible del celular */
+    margin-bottom: 24px !important;  /* Separa de forma limpia una tarjeta de otra */
   }
   
   .exp-grid { grid-template-columns: 1fr; }
