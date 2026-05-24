@@ -17,8 +17,8 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => 
   observer.observe(el);
 });
 
-// Hero: dispara inmediatamente al cargar
-window.addEventListener('load', () => {
+// Hero: dispara en cuanto la estructura HTML esté lista (¡Mucho más rápido!)
+document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.hero-left .reveal, .hero-right').forEach(el => {
     el.classList.add('visible');
   });
