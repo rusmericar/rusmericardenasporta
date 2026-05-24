@@ -144,53 +144,6 @@
     user-select: none;
 }
 
-/* --- 3. NUEVOS ESTILOS: CAPA DE ICONOS DE REPRODUCCIÓN (UX) --- */
-.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.2); /* Capa oscura sutil inicial */
-    transition: opacity 0.3s ease, background-color 0.3s ease;
-    pointer-events: none; /* Permite que los toques pasen directo al video */
-    z-index: 3;
-    opacity: 1;
-}
-
-.icono-circulo {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.video-overlay svg {
-    width: 22px;
-    height: 22px;
-    fill: #ffffff;
-}
-
-/* Clase dinámica que aplicará JS cuando el video ruede */
-.video-overlay.reproduciendo {
-    opacity: 0;
-    background: rgba(0, 0, 0, 0);
-}
-
-.video-overlay.reproduciendo .icono-circulo {
-    transform: scale(0.6);
-}
 </style>
 </head>
 <body>
@@ -314,74 +267,7 @@
 
 </div>
 
-<script>
-  const videos = document.querySelectorAll('.video-portafolio');
-
-  videos.forEach(video => {
-    // 1. INYECCIÓN AUTOMÁTICA DEL OVERLAY DE ICONOS
-    const overlay = document.createElement('div');
-    overlay.className = 'video-overlay';
-    overlay.innerHTML = `
-      <div class="icono-circulo">
-        <svg viewBox="0 0 24 24">
-          <path class="ruta-icono" d="M8 5v14l11-7z"/> </svg>
-      </div>
-    `;
-    video.parentElement.appendChild(overlay);
-
-    const pathIcono = overlay.querySelector('.ruta-icono');
-    const dPlay = "M8 5v14l11-7z";
-    const dPause = "M6 19h4V5H6v14zm8-14v14h4V5h-4z";
-
-    // Funciones para cambiar los iconos dinámicamente
-    function ponerPlay() {
-      pathIcono.setAttribute('d', dPlay);
-      overlay.classList.remove('reproduciendo');
-    }
-
-    function ponerPausaConEfecto() {
-      pathIcono.setAttribute('d', dPause);
-      overlay.classList.remove('reproduciendo'); // Se hace visible un instante
-      
-      // Tras 400 milisegundos se desvanece suavemente para que vean el video completo
-      setTimeout(() => {
-        if (!video.paused) {
-          overlay.classList.add('reproduciendo');
-        }
-      }, 400);
-    }
-
-    // --- COMPORTAMIENTO EN COMPUTADORA ---
-    video.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 768) {
-        video.play();
-        overlay.classList.add('reproduciendo');
-      }
-    });
-
-    video.addEventListener('mouseleave', () => {
-      if (window.innerWidth > 768) {
-        video.pause();
-        ponerPlay();
-      }
-    });
-
-    // --- COMPORTAMIENTO EN CELULAR (Un toque alterna, da feedback visual) ---
-    video.addEventListener('touchstart', (e) => {
-      if (window.innerWidth <= 768) {
-        e.preventDefault(); // Evita clics fantasmas
-        
-        if (video.paused) {
-          video.play();
-          ponerPausaConEfecto();
-        } else {
-          video.pause();
-          ponerPlay();
-        }
-      }
-    });
-  });
-</script>
+ <script src="js/video-player.js"></script>
 
 <script src="js/main.js"></script>
 </body>

@@ -47,6 +47,7 @@
         height: 320px;
         background: #000;
         border-radius: 12px;
+        position: relative;
         overflow: hidden;
     }
 
@@ -128,91 +129,44 @@
 <!-- Solo asegúrate de que los 3 estén dentro del mismo contenedor <section> -->
 <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels</h3>
 <section class="fila-celulares">
-    <!-- Reel 1 -->
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="deli1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/deli1.mp4" type="video/mp4">
-</video>
-    </div>
-    
-    <!-- Reel 2 -->
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="deli2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/deli2.mp4" type="video/mp4">
-</video>
-    </div>
-    
-    <!-- Reel 3 -->
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="deli3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/deli3.mp4" type="video/mp4">
-</video>
-    </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="deli1" preload="metadata" muted playsinline loop>
+      <source src="assets/deli1.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="deli2" preload="metadata" muted playsinline loop>
+      <source src="assets/deli2.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="deli3" preload="metadata" muted playsinline loop>
+      <source src="assets/deli3.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
 </section>
 
 <!-- REELS CUADRADOS -->
 <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels cuadrados</h3>
 <section class="grilla-posts">
-    <div class="contenedor-post-cuadrado">
-        <video 
-  id="delivideo1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/delivideo1.mp4" type="video/mp4">
-</video>
-    </div>
-    <div class="contenedor-post-cuadrado">
-        <video 
-  id="delivideo2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/delivideo2.mp4" type="video/mp4">
-</video>
-    </div>
-    <div class="contenedor-post-cuadrado">
-        <video 
-  id="delivideo3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/delivideo3.mp4" type="video/mp4">
-</video>
-    </div>
+<div class="contenedor-post-cuadrado">
+    <video class="video-portafolio" id="delivideo1" preload="metadata" muted playsinline loop>
+      <source src="assets/delivideo1.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-post-cuadrado">
+    <video class="video-portafolio" id="delivideo2" preload="metadata" muted playsinline loop>
+      <source src="assets/delivideo2.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-post-cuadrado">
+    <video class="video-portafolio" id="delivideo3" preload="metadata" muted playsinline loop>
+      <source src="assets/delivideo3.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
 </section>
     <!-- TAGS DE PROYECTO -->
     <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 2rem;">
@@ -229,7 +183,7 @@
   </section>
 
 </div>
-
+<script src="js/video-player.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

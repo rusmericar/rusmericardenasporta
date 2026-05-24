@@ -129,46 +129,25 @@
 
     <h3 style="text-align: center; color: var(--text-dark); margin-top: 60px; margin-bottom: 30px;">Reels</h3>
 <section class="fila-celulares">
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="casaterra1"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-   <source src="assets/casaterra venta.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="casaterra2"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-    <source src="assets/casaterrapie.mp4" type="video/mp4">
-        </video>
-    </div>
-    <div class="contenedor-celular">
-        <div class="notch"></div>
-        <video 
-  id="casaterra3"
-  onmouseover="this.play()" 
-  onmouseout="this.pause()" 
-  muted 
-  playsinline
-  controls
->
-
-<source src="assets/casaterraprovidencia.mp4" type="video/mp4">
-        </video>
-    </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="casaterra1" preload="metadata" muted playsinline loop>
+      <source src="assets/casaterra venta.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="casaterra2" preload="metadata" muted playsinline loop>
+      <source src="assets/casaterrapie.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+  <div class="contenedor-celular">
+    <div class="notch"></div>
+    <video class="video-portafolio" id="casaterra3" preload="metadata" muted playsinline loop>
+      <source src="assets/casaterraprovidencia.mp4#t=0.001" type="video/mp4">
+    </video>
+  </div>
+</section>
     <!-- Carrusel de Contenidos Casaterra -->
 <section class="seccion-carrusel">
     <h3 style="text-align: center; color: var(--text-dark); margin-bottom: 20px;">Carruseles</h3>
@@ -198,7 +177,7 @@
   </section>
 
 </div>
-
+<script src="js/video-player.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
