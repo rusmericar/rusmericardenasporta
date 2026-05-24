@@ -36,6 +36,7 @@
     <a href="#sobre-mi" class="nav-main-link">Sobre mí</a>
     <a href="#contacto" class="nav-main-link">Contacto</a>
   </div>
+  <div class="nav-overlay" id="nav-overlay"></div>
 </nav>
 
 <!-- ══════════════════════════════════
@@ -557,20 +558,27 @@
 
 <script src="js/main.js"></script>
 <script>
-  // ── NAV TOGGLE MOBILE ──
   const navToggle = document.getElementById('nav-toggle');
   const navMobileMenu = document.getElementById('nav-mobile-menu');
+  const navOverlay = document.getElementById('nav-overlay');
 
   navToggle.addEventListener('click', function() {
     navToggle.classList.toggle('open');
     navMobileMenu.classList.toggle('open');
+    navOverlay.classList.toggle('open');
   });
 
-  // Cerrar menú al hacer click en un enlace interno
+  navOverlay.addEventListener('click', function() {
+    navToggle.classList.remove('open');
+    navMobileMenu.classList.remove('open');
+    navOverlay.classList.remove('open');
+  });
+
   navMobileMenu.querySelectorAll('a').forEach(function(link) {
     link.addEventListener('click', function() {
       navToggle.classList.remove('open');
       navMobileMenu.classList.remove('open');
+      navOverlay.classList.remove('open');
     });
   });
 </script>
