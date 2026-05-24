@@ -101,10 +101,10 @@ nav {
 
 .nav-overlay.open { display: block; }
 .nav-mobile-menu a {
-  font-size: 17px; font-weight: 500;
+  font-size: 22px; font-weight: 500;
   color: var(--text-dark);
   text-decoration: none;
-  padding: 0.85rem 2.5rem;
+  padding: 1.2rem 1.5rem;
   border-bottom: 1px solid var(--cream-dark);
   letter-spacing: 0.3px;
   transition: background 0.15s, color 0.15s;
