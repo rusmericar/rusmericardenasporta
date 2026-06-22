@@ -37,6 +37,7 @@ const videos = document.querySelectorAll('.video-portafolio');
     // --- COMPORTAMIENTO EN COMPUTADORA ---
     video.addEventListener('mouseenter', () => {
       if (window.innerWidth > 768) {
+        video.volume = 1;
         video.play();
         overlay.classList.add('reproduciendo');
       }
@@ -55,6 +56,7 @@ const videos = document.querySelectorAll('.video-portafolio');
         e.preventDefault(); // Evita clics fantasmas
         
         if (video.paused) {
+          video.volume = 1;
           video.play();
           ponerPausaConEfecto();
         } else {
