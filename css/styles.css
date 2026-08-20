@@ -441,6 +441,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  perspective: 1200px;
 }
 
 .project-spread {
@@ -451,21 +452,46 @@ body {
   border: 1px solid rgba(30, 58, 110, 0.06);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: left center;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.project-spread::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(30, 58, 110, 0.06), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .project-spread:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(30, 58, 110, 0.12);
+  transform: rotateY(-3deg) translateZ(10px);
+  box-shadow: 12px 8px 40px rgba(30, 58, 110, 0.15),
+              4px 2px 12px rgba(30, 58, 110, 0.08);
+}
+
+.project-spread:hover::after {
+  opacity: 1;
 }
 
 .project-spread:hover .project-spread-thumb img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .project-spread:hover .project-spread-cta {
   color: var(--navy);
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+}
+
+.project-spread:hover .project-spread-cta::after {
+  transform: translateX(6px);
 }
 
 .project-spread-thumb {
@@ -481,7 +507,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 30px;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .project-spread-info {
@@ -543,7 +569,15 @@ body {
   text-transform: uppercase;
   color: var(--navy-mid);
   transition: color 0.3s, letter-spacing 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.project-spread-cta::after {
+  content: '→';
   display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .project-spread:hover .project-spread-cta {
@@ -555,6 +589,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
+  perspective: 1200px;
 }
 
 .project-card-ed {
@@ -562,21 +597,46 @@ body {
   border: 1px solid rgba(30, 58, 110, 0.06);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: left center;
+  transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+}
+
+.project-card-ed::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to left, rgba(30, 58, 110, 0.06), transparent);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .project-card-ed:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(30, 58, 110, 0.12);
+  transform: rotateY(-3deg) translateZ(10px);
+  box-shadow: 12px 8px 40px rgba(30, 58, 110, 0.15),
+              4px 2px 12px rgba(30, 58, 110, 0.08);
+}
+
+.project-card-ed:hover::after {
+  opacity: 1;
 }
 
 .project-card-ed:hover .project-card-ed-thumb img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .project-card-ed:hover .project-spread-cta {
   color: var(--navy);
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
+}
+
+.project-card-ed:hover .project-spread-cta::after {
+  transform: translateX(6px);
 }
 
 .project-card-ed-thumb {
@@ -592,7 +652,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 24px;
-  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .project-card-ed-info {
