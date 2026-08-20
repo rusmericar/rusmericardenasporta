@@ -460,34 +460,56 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 50px 50px;
-  border-color: transparent transparent #ddd8ce transparent;
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
   z-index: 10;
-  transition: border-width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   pointer-events: none;
-  filter: drop-shadow(-2px -2px 3px rgba(0, 0, 0, 0.12));
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
+/* La esquina doblada */
+.project-spread .page-curl::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    225deg,
+    #c5bfba 0%,
+    #d4cec7 30%,
+    #e8e3dc 60%,
+    var(--white) 100%
+  );
+  transform: rotate(0deg);
+  transform-origin: bottom right;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sombra debajo del curl */
 .project-spread .page-curl::after {
   content: '';
   position: absolute;
-  top: 5px;
-  left: -48px;
-  width: 48px;
-  height: 48px;
-  background: linear-gradient(
-    135deg,
-    transparent 20%,
-    rgba(0, 0, 0, 0.06) 45%,
-    rgba(0, 0, 0, 0.15) 100%
+  bottom: 0;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(
+    ellipse at bottom right,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 70%
   );
+  pointer-events: none;
 }
 
 .project-spread:hover .page-curl {
-  border-width: 0 0 70px 70px;
+  width: 70px;
+  height: 70px;
 }
 
 .project-spread:hover {
@@ -618,34 +640,52 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 40px 40px;
-  border-color: transparent transparent #ddd8ce transparent;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
   z-index: 10;
-  transition: border-width 0.4s cubic-bezier(0.23, 1, 0.32, 1);
   pointer-events: none;
-  filter: drop-shadow(-2px -2px 3px rgba(0, 0, 0, 0.12));
+  transition: width 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+              height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card-ed .page-curl::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    225deg,
+    #c5bfba 0%,
+    #d4cec7 30%,
+    #e8e3dc 60%,
+    var(--white) 100%
+  );
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  border-left: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .project-card-ed .page-curl::after {
   content: '';
   position: absolute;
-  top: 4px;
-  left: -38px;
-  width: 38px;
-  height: 38px;
-  background: linear-gradient(
-    135deg,
-    transparent 20%,
-    rgba(0, 0, 0, 0.06) 45%,
-    rgba(0, 0, 0, 0.15) 100%
+  bottom: 0;
+  right: 40px;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(
+    ellipse at bottom right,
+    rgba(0, 0, 0, 0.12) 0%,
+    transparent 70%
   );
+  pointer-events: none;
 }
 
 .project-card-ed:hover .page-curl {
-  border-width: 0 0 55px 55px;
+  width: 55px;
+  height: 55px;
 }
 
 .project-card-ed:hover {
