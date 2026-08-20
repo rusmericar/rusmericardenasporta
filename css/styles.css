@@ -460,8 +460,8 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   overflow: hidden;
   z-index: 10;
   pointer-events: none;
@@ -469,47 +469,47 @@ body {
               height 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-/* La esquina doblada */
+/* Triángulo de la esquina doblada */
 .project-spread .page-curl::before {
   content: '';
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  width: 85px;
+  height: 85px;
   background: linear-gradient(
-    225deg,
-    #c5bfba 0%,
-    #d4cec7 30%,
-    #e8e3dc 60%,
-    var(--white) 100%
+    315deg,
+    #e0dbd4 0%,
+    #ece8e1 40%,
+    #f5f2ed 70%,
+    #faf8f5 100%
   );
-  transform: rotate(0deg);
+  transform: rotate(45deg);
   transform-origin: bottom right;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-left: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.12);
 }
 
-/* Sombra debajo del curl */
+/* Sombra de la página levantada */
 .project-spread .page-curl::after {
   content: '';
   position: absolute;
   bottom: 0;
-  right: 50px;
-  width: 50px;
-  height: 50px;
-  background: radial-gradient(
-    ellipse at bottom right,
-    rgba(0, 0, 0, 0.12) 0%,
-    transparent 70%
+  right: 55px;
+  width: 25px;
+  height: 60px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 100%
   );
   pointer-events: none;
 }
 
 .project-spread:hover .page-curl {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
 }
 
 .project-spread:hover {
@@ -640,8 +640,8 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   overflow: hidden;
   z-index: 10;
   pointer-events: none;
@@ -654,38 +654,40 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 100%;
-  height: 100%;
+  width: 68px;
+  height: 68px;
   background: linear-gradient(
-    225deg,
-    #c5bfba 0%,
-    #d4cec7 30%,
-    #e8e3dc 60%,
-    var(--white) 100%
+    315deg,
+    #e0dbd4 0%,
+    #ece8e1 40%,
+    #f5f2ed 70%,
+    #faf8f5 100%
   );
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  border-left: 1px solid rgba(0, 0, 0, 0.06);
-  box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.1);
+  transform: rotate(45deg);
+  transform-origin: bottom right;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: -3px 3px 6px rgba(0, 0, 0, 0.12);
 }
 
 .project-card-ed .page-curl::after {
   content: '';
   position: absolute;
   bottom: 0;
-  right: 40px;
-  width: 40px;
-  height: 40px;
-  background: radial-gradient(
-    ellipse at bottom right,
-    rgba(0, 0, 0, 0.12) 0%,
-    transparent 70%
+  right: 43px;
+  width: 20px;
+  height: 48px;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    transparent 100%
   );
   pointer-events: none;
 }
 
 .project-card-ed:hover .page-curl {
-  width: 55px;
-  height: 55px;
+  width: 65px;
+  height: 65px;
 }
 
 .project-card-ed:hover {
