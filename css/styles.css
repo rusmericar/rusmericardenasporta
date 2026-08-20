@@ -451,12 +451,21 @@ body {
   border: 1px solid rgba(30, 58, 110, 0.06);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-spread:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(30, 58, 110, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(30, 58, 110, 0.12);
+}
+
+.project-spread:hover .project-spread-thumb img {
+  transform: scale(1.05);
+}
+
+.project-spread:hover .project-spread-cta {
+  color: var(--navy);
+  letter-spacing: 2px;
 }
 
 .project-spread-thumb {
@@ -472,6 +481,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 30px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-spread-info {
@@ -532,7 +542,8 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--navy-mid);
-  transition: color 0.2s;
+  transition: color 0.3s, letter-spacing 0.3s;
+  display: inline-block;
 }
 
 .project-spread:hover .project-spread-cta {
@@ -551,12 +562,21 @@ body {
   border: 1px solid rgba(30, 58, 110, 0.06);
   overflow: hidden;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card-ed:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 40px rgba(30, 58, 110, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(30, 58, 110, 0.12);
+}
+
+.project-card-ed:hover .project-card-ed-thumb img {
+  transform: scale(1.05);
+}
+
+.project-card-ed:hover .project-spread-cta {
+  color: var(--navy);
+  letter-spacing: 2px;
 }
 
 .project-card-ed-thumb {
@@ -572,6 +592,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 24px;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .project-card-ed-info {
