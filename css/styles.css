@@ -23,6 +23,73 @@
 html { scroll-behavior: smooth; }
 body { font-family: 'DM Sans', sans-serif; background: #f5f0e8; color: var(--text-dark); }
 
+/* Controles compartidos para carruseles de proyectos */
+.carousel-shell {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-shell > .media-carousel-wrapper,
+.carousel-shell > .carrusel-track {
+  scrollbar-width: none;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.carousel-shell > .media-carousel-wrapper::-webkit-scrollbar,
+.carousel-shell > .carrusel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-shell > .is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  padding: 0 8px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.carousel-control {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--cream-dark);
+  border-radius: 50%;
+  background: var(--cream-light);
+  color: var(--navy);
+  font: 500 20px/1 'DM Sans', sans-serif;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: background 0.2s, color 0.2s, opacity 0.2s;
+}
+
+.carousel-control:hover:not(:disabled),
+.carousel-control:focus-visible:not(:disabled) {
+  background: var(--navy);
+  color: var(--cream);
+  outline: none;
+}
+
+.carousel-control:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+}
+
+@media (max-width: 767px) {
+  .carousel-controls { display: none; }
+}
+
 /* ── NAV ── */
 nav {
   display: flex; justify-content: space-between; align-items: center;
