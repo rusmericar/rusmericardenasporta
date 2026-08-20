@@ -1066,6 +1066,14 @@ body {
     display: none;
   }
 
+  nav {
+    padding: 1rem 1.5rem;
+  }
+
+  nav .nav-links {
+    display: none;
+  }
+
   .nav-toggle {
     display: flex;
   }
