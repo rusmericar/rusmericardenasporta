@@ -31,6 +31,50 @@ body {
 }
 
 /* ── NAV ── */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 3rem;
+  background: rgba(245, 240, 232, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(30, 58, 110, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.5px;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+nav .nav-links a {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav .nav-links a:hover {
+  color: var(--navy);
+}
+
 .nav-editorial {
   display: flex;
   justify-content: space-between;
@@ -1058,19 +1102,11 @@ body {
    RESPONSIVE — MOBILE (max 768px)
 ══════════════════════════════════ */
 @media (max-width: 768px) {
-  .nav-editorial {
+  nav, .nav-editorial {
     padding: 1rem 1.5rem;
   }
 
-  .nav-editorial .nav-links {
-    display: none;
-  }
-
-  nav {
-    padding: 1rem 1.5rem;
-  }
-
-  nav .nav-links {
+  nav .nav-links, .nav-editorial .nav-links {
     display: none;
   }
 
