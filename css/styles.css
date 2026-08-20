@@ -441,7 +441,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  perspective: 1400px;
 }
 
 .project-spread {
@@ -450,65 +449,26 @@ body {
   gap: 0;
   background: var(--white);
   border: 1px solid rgba(30, 58, 110, 0.06);
-  overflow: visible;
+  overflow: hidden;
   cursor: pointer;
-  transform-origin: left center;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-              box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative;
-}
-
-/* Sombra de página levantada */
-.project-spread::before {
-  content: '';
-  position: absolute;
-  top: 4px; left: 4px; right: -4px; bottom: -4px;
-  background: rgba(30, 58, 110, 0.08);
-  z-index: -1;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: inherit;
-}
-
-/* Gradiente de luz en el borde */
-.project-spread::after {
-  content: '';
-  position: absolute;
-  top: 0; right: -2px;
-  width: 40px;
-  height: 100%;
-  background: linear-gradient(to left, rgba(255,255,255,0.4), transparent);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-spread:hover {
-  transform: rotateY(-10deg) translateZ(20px);
-  box-shadow: 25px 15px 50px rgba(30, 58, 110, 0.2),
-              8px 4px 16px rgba(30, 58, 110, 0.1);
-}
-
-.project-spread:hover::before {
-  top: 8px; left: 8px; right: -8px; bottom: -8px;
-  background: rgba(30, 58, 110, 0.12);
-}
-
-.project-spread:hover::after {
-  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30, 58, 110, 0.1);
 }
 
 .project-spread:hover .project-spread-thumb img {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .project-spread:hover .project-spread-cta {
   color: var(--navy);
-  letter-spacing: 2.5px;
 }
 
 .project-spread:hover .project-spread-cta::after {
-  transform: translateX(6px);
+  transform: translateX(4px);
 }
 
 .project-spread-thumb {
@@ -524,7 +484,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 30px;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s ease;
 }
 
 .project-spread-info {
@@ -585,7 +545,7 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   color: var(--navy-mid);
-  transition: color 0.3s, letter-spacing 0.3s;
+  transition: color 0.3s;
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -594,7 +554,7 @@ body {
 .project-spread-cta::after {
   content: '→';
   display: inline-block;
-  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.3s ease;
 }
 
 .project-spread:hover .project-spread-cta {
@@ -606,69 +566,31 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  perspective: 1400px;
 }
 
 .project-card-ed {
   background: var(--white);
   border: 1px solid rgba(30, 58, 110, 0.06);
-  overflow: visible;
+  overflow: hidden;
   cursor: pointer;
-  transform-origin: left center;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-              box-shadow 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  position: relative;
-}
-
-.project-card-ed::before {
-  content: '';
-  position: absolute;
-  top: 4px; left: 4px; right: -4px; bottom: -4px;
-  background: rgba(30, 58, 110, 0.08);
-  z-index: -1;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  border-radius: inherit;
-}
-
-.project-card-ed::after {
-  content: '';
-  position: absolute;
-  top: 0; right: -2px;
-  width: 40px;
-  height: 100%;
-  background: linear-gradient(to left, rgba(255,255,255,0.4), transparent);
-  opacity: 0;
-  transition: opacity 0.5s ease;
-  pointer-events: none;
-  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card-ed:hover {
-  transform: rotateY(-10deg) translateZ(20px);
-  box-shadow: 25px 15px 50px rgba(30, 58, 110, 0.2),
-              8px 4px 16px rgba(30, 58, 110, 0.1);
-}
-
-.project-card-ed:hover::before {
-  top: 8px; left: 8px; right: -8px; bottom: -8px;
-  background: rgba(30, 58, 110, 0.12);
-}
-
-.project-card-ed:hover::after {
-  opacity: 1;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(30, 58, 110, 0.1);
 }
 
 .project-card-ed:hover .project-card-ed-thumb img {
-  transform: scale(1.08);
+  transform: scale(1.04);
 }
 
 .project-card-ed:hover .project-spread-cta {
   color: var(--navy);
-  letter-spacing: 2.5px;
 }
 
 .project-card-ed:hover .project-spread-cta::after {
-  transform: translateX(6px);
+  transform: translateX(4px);
 }
 
 .project-card-ed-thumb {
@@ -684,7 +606,7 @@ body {
   height: 100%;
   object-fit: contain;
   padding: 24px;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 0.5s ease;
 }
 
 .project-card-ed-info {
