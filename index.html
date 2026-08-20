@@ -7,296 +7,358 @@
 <meta name="description" content="Portfolio de Rusmeri Cárdenas — Content Creator, Social Media Manager y Copywriting Estratégico con más de 3 años de experiencia en agencias de Chile, Perú y Argentina.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <!-- ── NAVEGACIÓN ── -->
-<nav>
+<nav class="nav-editorial">
   <a href="#" class="nav-logo" id="nav-logo">Rusmeri</a>
   <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-    <li><a href="#sobre-mi" class="nav-main-link">Sobre mí</a></li>
-    <li><a href="#proyectos" class="nav-main-link">Proyectos</a></li>
-    <li><a href="#experiencia" class="nav-main-link">Experiencia</a></li>
-    <li><a href="#contacto" class="nav-main-link">Contacto</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#proyectos">Proyectos</a></li>
+    <li><a href="#experiencia">Experiencia</a></li>
+    <li><a href="#contacto">Contacto</a></li>
   </ul>
   <div class="nav-mobile-menu" id="nav-mobile-menu">
-    <a href="#sobre-mi" class="nav-main-link">Sobre mí</a>
-    <a href="#proyectos" class="nav-main-link">Proyectos</a>
-    <a href="#experiencia" class="nav-main-link">Experiencia</a>
-    <a href="#contacto" class="nav-main-link">Contacto</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#contacto">Contacto</a>
   </div>
   <div class="nav-overlay" id="nav-overlay"></div>
 </nav>
 
-<div id="page-main">
-
-  <!-- ── HERO ── -->
-  <section class="about-section" id="sobre-mi">
-    <div class="about-content reveal-right">
-      <div class="about-tag">Sobre mí</div>
-      <h2>Hola, soy <em>Rusmeri</em></h2>
-      <p>Bachiller en Publicidad con más de tres años de experiencia en marketing digital, creación de contenido, redacción creativa y gestión de comunidades. He administrado múltiples cuentas de manera simultánea para audiencias de distintos países, adaptando la comunicación a diversos contextos culturales y necesidades de cada marca. Me apasiona combinar la creatividad con el análisis de datos para identificar oportunidades de mejora, optimizar campañas y generar contenido con impacto. Cuento con un nivel de inglés C1 y experiencia en herramientas de análisis y medición de resultados.</p>
-            <div class="hero-actions">
-        <a href="#proyectos" class="btn-cream nav-main-link">Ver proyectos</a>
-        <a href="#contacto" class="btn-outline nav-main-link">Contáctame</a>
+<!-- ── HERO ── -->
+<section class="hero" id="sobre-mi">
+  <div class="hero-inner">
+    <div class="hero-text reveal-right">
+      <span class="hero-label">Social Media Manager & Copywriter</span>
+      <h1 class="hero-headline">Hola, soy <em>Rusmeri</em></h1>
+      <div class="hero-divider"></div>
+      <p class="hero-bio">
+        Bachiller en Publicidad con más de tres años de experiencia en marketing digital, creación de contenido, redacción creativa y gestión de comunidades. He administrado múltiples cuentas de manera simultánea para audiencias de distintos países, adaptando la comunicación a diversos contextos culturales y necesidades de cada marca.
+      </p>
+      <div class="hero-quote">
+        <span class="hero-quote-mark">"</span>
+        <p>Me apasiona combinar la creatividad con el análisis de datos para identificar oportunidades de mejora, optimizar campañas y generar contenido con impacto.</p>
+      </div>
+      <div class="hero-actions">
+        <a href="#proyectos" class="btn-editorial">Ver proyectos</a>
+        <a href="#contacto" class="btn-editorial-outline">Contáctame</a>
       </div>
     </div>
-    <div class="about-photo reveal-left">
-      <div class="photo-circle-wrapper">
-        <div class="photo-deco-ring"></div>
-        <div class="photo-circle-outer">
-          <div class="photo-circle-inner">
-            <img src="assets/rusmericardenas.webp" alt="Rusmeri Cárdenas" class="about-photo-img">
-          </div>
-        </div>
+    <div class="hero-photo reveal-left">
+      <div class="hero-photo-frame">
+        <img src="assets/rusmericardenas.webp" alt="Rusmeri Cárdenas" class="hero-photo-img">
       </div>
-      <p class="photo-name">Rusmeri Cárdenas</p>
-      <p class="photo-role">Publicista · Content Strategist</p>
+      <div class="hero-photo-caption">
+        <span class="caption-name">Rusmeri Cárdenas</span>
+        <span class="caption-role">Publicista · Content Strategist</span>
+      </div>
     </div>
-  </section>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="stat-number">3+</span>
+      <span class="stat-label">Años de experiencia</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-number">5</span>
+      <span class="stat-label">Marcas gestionadas</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-number">3</span>
+      <span class="stat-label">Países</span>
+    </div>
+  </div>
+</section>
 
-  <!-- ── SKILLS STRIP ── -->
-  <div class="skills-strip">
-    <div class="skill-item"><div class="skill-dot"></div>Estrategia de contenido</div>
-    <div class="skill-item"><div class="skill-dot"></div>Storytelling</div>
-    <div class="skill-item"><div class="skill-dot"></div>Social Listening</div>
-    <div class="skill-item"><div class="skill-dot"></div>Copywriting SEO</div>
-    <div class="skill-item"><div class="skill-dot"></div>Meta Ads Manager</div>
-    <div class="skill-item"><div class="skill-dot"></div>Community Management</div>
-    <div class="skill-item"><div class="skill-dot"></div>Email Marketing</div>
-    <div class="skill-item"><div class="skill-dot"></div>Edición de Video</div>
-    <div class="skill-item"><div class="skill-dot"></div>Dirección creativa</div>
+<!-- ── SKILLS ── -->
+<section class="skills-editorial">
+  <div class="skills-editorial-inner">
+    <span class="skill-ed">Estrategia de contenido</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Storytelling</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Social Listening</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Copywriting SEO</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Meta Ads Manager</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Community Management</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Email Marketing</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Edición de Video</span>
+    <span class="skill-ed-dot">·</span>
+    <span class="skill-ed">Dirección creativa</span>
+  </div>
+</section>
+
+<!-- ── PROYECTOS ── -->
+<section class="section-editorial" id="proyectos">
+  <div class="section-editorial-header reveal">
+    <span class="section-editorial-label">02</span>
+    <h2 class="section-editorial-title">Proyectos destacados</h2>
+    <div class="section-editorial-line"></div>
   </div>
 
-  <!-- ── ONDA navy → cream ── -->
-  <div class="wave-divider" style="background: var(--navy);">
-    <svg viewBox="0 0 1440 90" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block; width:100%; height:90px;">
-      <path d="M0,30 C360,90 900,0 1440,50 L1440,90 L0,90 Z" fill="var(--cream)"/>
-    </svg>
+  <div class="projects-editorial">
+
+    <!-- Proyecto destacado grande -->
+    <article class="project-spread reveal" onclick="location.href='proyecto-casaterra.html'">
+      <div class="project-spread-thumb" style="background: #035046;">
+        <img src="assets/casaterra.webp" alt="CasaTerra">
+      </div>
+      <div class="project-spread-info">
+        <span class="project-spread-brand">CasaTerra · Agencia Eunoia</span>
+        <h3 class="project-spread-name">Una estrategia de contenido pensada para first-home buyers</h3>
+        <p class="project-spread-desc">Usamos lenguaje digital, trends y contenido orgánico para conectar con jóvenes interesados en su primera vivienda en Chile. El resultado: crecimiento sostenido de comunidad y leads calificados.</p>
+        <div class="project-spread-tags">
+          <span class="tag-ed">Instagram</span>
+          <span class="tag-ed">TikTok</span>
+          <span class="tag-ed tag-ed-dark">Estrategia</span>
+        </div>
+        <span class="project-spread-cta">Ver proyecto →</span>
+      </div>
+    </article>
+
+    <!-- Fila de 2 proyectos medianos -->
+    <div class="projects-row">
+      <article class="project-card-ed reveal reveal-delay-1" onclick="location.href='proyecto-maxlash.html'">
+        <div class="project-card-ed-thumb" style="background: #e9d8d2;">
+          <img src="assets/maxlash.webp" alt="Max Lash">
+        </div>
+        <div class="project-card-ed-info">
+          <span class="project-card-ed-brand">Max Lash · 8 Mar Agencia</span>
+          <h3 class="project-card-ed-name">La mirada como expresión de lujo, confianza y estilo</h3>
+          <p class="project-card-ed-desc">La estrategia de contenido fortaleció la percepción aspiracional y confiable de la marca frente a nuevos competidores.</p>
+          <div class="project-spread-tags">
+            <span class="tag-ed tag-ed-dark">Copy</span>
+            <span class="tag-ed">Premium</span>
+          </div>
+          <span class="project-spread-cta">Ver proyecto →</span>
+        </div>
+      </article>
+
+      <article class="project-card-ed reveal reveal-delay-2" onclick="location.href='proyecto-aje.html'">
+        <div class="project-card-ed-thumb" style="background: #ffffff;">
+          <img src="assets/aje.webp" alt="AJE">
+        </div>
+        <div class="project-card-ed-info">
+          <span class="project-card-ed-brand">AJE · Agencia D.O</span>
+          <h3 class="project-card-ed-name">Bebidas que hablan el lenguaje cultural peruano</h3>
+          <p class="project-card-ed-desc">Aprovechamos insights culturales como la comida, el humor y el lenguaje cotidiano para generar conexión orgánica con el target local.</p>
+          <div class="project-spread-tags">
+            <span class="tag-ed">Guiones</span>
+            <span class="tag-ed">Contenido orgánico</span>
+          </div>
+          <span class="project-spread-cta">Ver proyecto →</span>
+        </div>
+      </article>
+    </div>
+
+    <!-- Fila de 2 proyectos medianos -->
+    <div class="projects-row">
+      <article class="project-card-ed reveal reveal-delay-3" onclick="location.href='proyecto-ism.html'">
+        <div class="project-card-ed-thumb" style="background: #00962f;">
+          <img src="assets/ism.webp" alt="ISM">
+        </div>
+        <div class="project-card-ed-info">
+          <span class="project-card-ed-brand">Delikrach · Industrias San Miguel</span>
+          <h3 class="project-card-ed-name">Lanzamos una marca de cereal pensada para todas las generaciones</h3>
+          <p class="project-card-ed-desc">Creamos una narrativa digital que amplió el consumo del producto más allá del desayuno, conectando con niños, jóvenes y adultos.</p>
+          <div class="project-spread-tags">
+            <span class="tag-ed">Lanzamiento</span>
+            <span class="tag-ed">Influencers</span>
+          </div>
+          <span class="project-spread-cta">Ver proyecto →</span>
+        </div>
+      </article>
+
+      <article class="project-card-ed reveal reveal-delay-4" onclick="location.href='proyecto-chinito.html'">
+        <div class="project-card-ed-thumb" style="background: #fcc300;">
+          <img src="assets/chinito.webp" alt="El Chinito">
+        </div>
+        <div class="project-card-ed-info">
+          <span class="project-card-ed-brand">El Chinito Sanguchería</span>
+          <h3 class="project-card-ed-name">Cómo actualizamos una marca tradicional sin perder su esencia</h3>
+          <p class="project-card-ed-desc">El rebranding conservó el carácter artesanal e histórico de la marca mientras se modernizaba su presencia visual.</p>
+          <div class="project-spread-tags">
+            <span class="tag-ed tag-ed-dark">Rebranding</span>
+            <span class="tag-ed">Diseño</span>
+          </div>
+          <span class="project-spread-cta">Ver proyecto →</span>
+        </div>
+      </article>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── EXPERIENCIA ── -->
+<section class="section-editorial section-editorial-alt" id="experiencia">
+  <div class="section-editorial-header reveal">
+    <span class="section-editorial-label">03</span>
+    <h2 class="section-editorial-title">Experiencia profesional</h2>
+    <div class="section-editorial-line"></div>
   </div>
 
-  <!-- ── PROYECTOS ── -->
-  <section class="section" id="proyectos">
-    <div class="section-header">
-      <div>
-      <div class="section-title">Proyectos destacados</div>
+  <div class="timeline-editorial">
+
+    <div class="timeline-item reveal">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
       </div>
-    </div>
-    <div class="pinterest-grid">
-
-      <div class="project-card reveal reveal-delay-1" onclick="location.href='proyecto-casaterra.html'">
-        <div class="project-thumb h-md" style="background: #035046; display:flex; align-items:center; justify-content:center;">
-          <img src="assets/casaterra.webp" alt="CasaTerra" style="height:100%; width:100%; object-fit:contain; padding:20px;">
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-company">Agencia Eunoia</span>
+          <span class="timeline-sep">·</span>
+          <span class="timeline-location">Chile · Remoto</span>
         </div>
-        <div class="project-info">
-          <div class="project-brand">CasaTerra · Agencia Eunoia</div>
-          <div class="project-name">Una estrategia de contenido pensada para first-home buyers</div>
-          <div class="project-desc">Usamos lenguaje digital, trends y contenido orgánico para conectar con jóvenes interesados en su primera vivienda en Chile.</div>
-          <div class="project-tags">
-            <span class="tag tag-blue">Instagram</span>
-            <span class="tag tag-blue">TikTok</span>
-            <span class="tag tag-navy">Estrategia</span>
-          </div>
-          <div class="project-cta">Ver proyecto →</div>
+        <h3 class="timeline-role">Social Media Manager & Copywriter</h3>
+        <div class="timeline-clients">
+          <span class="client-tag">CasaTerra</span>
         </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-4" onclick="location.href='proyecto-maxlash.html'">
-        <div class="project-thumb h-md" style="background: #e9d8d2; display:flex; align-items:center; justify-content:center;">
-          <img src="assets/maxlash.webp" alt="Max Lash" style="height:100%; width:100%; object-fit:contain; padding:20px;">
-        </div>
-        <div class="project-info">
-          <div class="project-brand">Max Lash · 8 Mar Agencia</div>
-          <div class="project-name">La mirada como expresión de lujo, confianza y estilo</div>
-          <div class="project-desc">La estrategia de contenido fortaleció la percepción aspiracional y confiable de la marca frente a nuevos competidores.</div>
-          <div class="project-tags">
-            <span class="tag tag-navy">Copy</span>
-            <span class="tag tag-blue">Premium</span>
-          </div>
-          <div class="project-cta">Ver proyecto →</div>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-2" onclick="location.href='proyecto-aje.html'">
-        <div class="project-thumb h-md" style="background: #ffffff; display:flex; align-items:center; justify-content:center;">
-          <img src="assets/aje.webp" alt="Aje" style="height:100%; width:100%; object-fit:contain; padding:20px;">
-        </div>
-        <div class="project-info">
-          <div class="project-brand">AJE · Agencia D.O</div>
-          <div class="project-name">Bebidas que hablan el lenguaje cultural peruano</div>
-          <div class="project-desc">Aprovechamos insights culturales como la comida, el humor y el lenguaje cotidiano para generar conexión orgánica con el target local.</div>
-          <div class="project-tags">
-            <span class="tag tag-cream">Guiones</span>
-            <span class="tag tag-blue">Contenido orgánico</span>
-          </div>
-          <div class="project-cta">Ver proyecto →</div>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-3" onclick="location.href='proyecto-ism.html'">
-        <div class="project-thumb h-md" style="background: #00962f; display:flex; align-items:center; justify-content:center;">
-          <img src="assets/ism.webp" alt="ISM" style="height:100%; width:100%; object-fit:contain; padding:20px;">
-        </div>
-        <div class="project-info">
-          <div class="project-brand">Delikrach · Industrias San Miguel</div>
-          <div class="project-name">Lanzamos una marca de cereal pensada para todas las generaciones</div>
-          <div class="project-desc">Creamos una narrativa digital que amplió el consumo del producto más allá del desayuno, conectando con niños, jóvenes y adultos.</div>
-          <div class="project-tags">
-            <span class="tag tag-cream">Lanzamiento</span>
-            <span class="tag tag-blue">Influencers</span>
-          </div>
-          <div class="project-cta">Ver proyecto →</div>
-        </div>
-      </div>
-
-      <div class="project-card reveal reveal-delay-5" onclick="location.href='proyecto-chinito.html'">
-        <div class="project-thumb h-md" style="background: #fcc300; display:flex; align-items:center; justify-content:center;">
-          <img src="assets/chinito.webp" alt="El Chinito" style="height:100%; width:100%; object-fit:contain; padding:20px;">
-        </div>
-        <div class="project-info">
-          <div class="project-brand">El Chinito Sanguchería</div>
-          <div class="project-name">Cómo actualizamos una marca tradicional sin perder su esencia</div>
-          <div class="project-desc">El rebranding conservó el carácter artesanal e histórico de la marca mientras se modernizaba su presencia visual.</div>
-          <div class="project-tags">
-            <span class="tag tag-blue">Rebranding</span>
-            <span class="tag tag-cream">Diseño</span>
-          </div>
-          <div class="project-cta">Ver proyecto →</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ── ONDA cream → cream-dark ── -->
-  <div class="wave-divider" style="background: var(--cream);">
-    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="60">
-      <path d="M0,40 C360,0 720,60 1080,20 C1260,0 1380,10 1440,0 L1440,60 L0,60 Z" fill="#ede8df"/>
-    </svg>
-  </div>
-
-  <!-- ── EXPERIENCIA ── -->
-  <section class="exp-section" id="experiencia">
-    <div class="section-header">
-      <div>
-      <div class="section-title">Experiencia profesional</div>
-      </div>
-    </div>
-    <div class="exp-grid">
-      <div class="exp-card reveal reveal-delay-2">
-                <div class="exp-role">Social Media Manager & Copywriter</div>
-        <div class="exp-company">Agencia Eunoia · Chile · Remoto</div>
-        <div class="exp-clients"><span class="client-chip">CasaTerra</span></div>
-        <ul class="exp-bullets">
-          <li>Redacté campañas de email marketing para la adquisición y retención de leads, alcanzando tasas de conversión de entre el 70% y el 80%.</li>
+        <ul class="timeline-bullets">
+          <li>Redacté campañas de email marketing para la adquisición y retención de leads, alcanzando tasas de conversión de entre el <strong>70% y el 80%</strong>.</li>
           <li>Desarrollé calendarios de contenido orgánico y pagado alineados con los objetivos específicos de cada marca.</li>
-          <li>Produje contenido orgánico optimizado para motores de búsqueda (SEO) con el fin de mejorar la visibilidad de la marca.</li>
-          <li>Gestioné comunidades digitales mediante el monitoreo de interacciones y consultas bajo una estricta alineación con la marca, impulsando un aumento del 80% en el engagement y la retención de la audiencia.</li>
-          <li>Monitoreé y analicé métricas orgánicas y pagadas en Meta y TikTok Ads para identificar oportunidades de optimización y elevar el rendimiento del contenido.</li>
-          <li>Colaboré estrechamente con el equipo de ventas, entregando constantemente leads calificados para impulsar el crecimiento del negocio y los ingresos.</li>
+          <li>Gestioné comunidades digitales mediante el monitoreo de interacciones, impulsando un aumento del <strong>80%</strong> en el engagement.</li>
+          <li>Monitoreé y analicé métricas orgánicas y pagadas en Meta y TikTok Ads para identificar oportunidades de optimización.</li>
         </ul>
       </div>
-      <div class="exp-card reveal reveal-delay-2">
-                <div class="exp-role">Community Manager</div>
-        <div class="exp-company">Tribeca Media · Perú · Remoto</div>
-        <div class="exp-clients"><span class="client-chip">Entel</span></div>
-        <ul class="exp-bullets">
-          <li>Transformé las interacciones entrantes en SmarterClick en oportunidades de conexión con la audiencia mediante respuestas ágiles, frescas y alineadas al tono de voz de la marca.</li>
-          <li>Adapté los protocolos de atención a un lenguaje creativo y cercano que refuerce la identidad de la marca incluso al resolver dudas o reclamos.</li>
-          <li>Cacé insights, tendencias y dolores recurrentes dentro de los mensajes de los usuarios para proponer ideas disruptivas y copys al equipo de contenido.</li>
-          <li>Monitoreé la respuesta de la comunidad ante el lanzamiento de campañas publicitarias para medir el impacto real y el sentimiento de las piezas creativas.</li>
-          <li>Detecté a tiempo comentarios críticos o crisis potenciales en la plataforma para contener el impacto negativo y proteger la reputación digital de la marca.</li>
-        </ul>
+    </div>
+
+    <div class="timeline-item reveal reveal-delay-1">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
       </div>
-      <div class="exp-card reveal reveal-delay-3">
-                <div class="exp-role">Creadora de Contenido & Copywriter</div>
-        <div class="exp-company">8 Mar Agencia · Perú · Remoto</div>
-        <div class="exp-clients">
-          <span class="client-chip">Industrias San Miguel</span>
-          <span class="client-chip">Max Lash</span>
-          <span class="client-chip">Softys</span>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-company">Tribeca Media</span>
+          <span class="timeline-sep">·</span>
+          <span class="timeline-location">Perú · Remoto</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Gestioné portafolios multimarca de forma simultánea, desarrollando estrategias de contenido multiplataforma (redes sociales, web, radio, TV y BTL) con altos estándares de organización y meticulosa atención al detalle.</li>
-          <li>Desarrollé y ejecuté calendarios de contenido orgánico y de medios pagados para múltiples marcas, coordinando los flujos de producción con agencias de medios y productoras audiovisuales.</li>
-          <li>Coordiné colaboraciones con influencers para rodajes y activaciones BTL, gestionando múltiples requerimientos de proyectos al mismo tiempo.</li>
-          <li>Realicé benchmarking continuo y análisis de tendencias para identificar oportunidades narrativas y fortalecer el contenido de la marca.</li>
-          <li>Implementé contenido web basado en SEO, mejorando el posicionamiento orgánico y expandiendo el alcance de los canales digitales en un 70%.</li>
+        <h3 class="timeline-role">Community Manager</h3>
+        <div class="timeline-clients">
+          <span class="client-tag">Entel</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Transformé las interacciones entrantes en oportunidades de conexión mediante respuestas ágiles y alineadas al tono de voz de la marca.</li>
+          <li>Cacé insights, tendencias y dolores recurrentes para proponer ideas disruptivas al equipo de contenido.</li>
+          <li>Detecté a tiempo comentarios críticos o crisis potenciales para proteger la reputación digital de la marca.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal reveal-delay-2">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-company">8 Mar Agencia</span>
+          <span class="timeline-sep">·</span>
+          <span class="timeline-location">Perú · Remoto</span>
+        </div>
+        <h3 class="timeline-role">Creadora de Contenido & Copywriter</h3>
+        <div class="timeline-clients">
+          <span class="client-tag">Industrias San Miguel</span>
+          <span class="client-tag">Max Lash</span>
+          <span class="client-tag">Softys</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Gestioné portafolios multimarca de forma simultánea, desarrollando estrategias de contenido multiplataforma con altos estándares de organización.</li>
+          <li>Implementé contenido web basado en SEO, mejorando el posicionamiento orgánico y expandiendo el alcance en un <strong>70%</strong>.</li>
           <li>Redacté manifiestos de marca, spots publicitarios y guiones para medios digitales, radio y televisión.</li>
         </ul>
       </div>
-      <div class="exp-card reveal reveal-delay-4">
-                <div class="exp-role">Redactora Creativa</div>
-        <div class="exp-company">Do Agencia · Argentina · Remoto</div>
-        <div class="exp-clients">
-          <span class="client-chip">Heineken</span>
-          <span class="client-chip">AJE</span>
+    </div>
+
+    <div class="timeline-item reveal reveal-delay-3">
+      <div class="timeline-marker">
+        <div class="timeline-dot"></div>
+      </div>
+      <div class="timeline-content">
+        <div class="timeline-meta">
+          <span class="timeline-company">Do Agencia</span>
+          <span class="timeline-sep">·</span>
+          <span class="timeline-location">Argentina · Remoto</span>
         </div>
-        <ul class="exp-bullets">
-          <li>Desarrollé calendarios de contenido y propuestas creativas fundamentadas en insights del consumidor y tendencias digitales para lanzamientos de productos y campañas de posicionamiento de marca.</li>
-          <li>Redacté manifiestos de marca, eslóganes y copys tanto para medios digitales como para publicidad exterior (OOH).</li>
-          <li>Contribuí en la conceptualización de piezas creativas para festivales internacionales de publicidad, incluidos Cannes Lions y El Ojo de Iberoamérica.</li>
+        <h3 class="timeline-role">Redactora Creativa</h3>
+        <div class="timeline-clients">
+          <span class="client-tag">Heineken</span>
+          <span class="client-tag">AJE</span>
+        </div>
+        <ul class="timeline-bullets">
+          <li>Desarrollé propuestas creativas fundamentadas en insights del consumidor para lanzamientos de productos y campañas de posicionamiento.</li>
+          <li>Redacté manifiestos de marca, eslóganes y copys para medios digitales y publicidad exterior (OOH).</li>
+          <li>Contribuí en la conceptualización de piezas creativas para festivales internacionales, incluidos <strong>Cannes Lions</strong> y <strong>El Ojo de Iberoamérica</strong>.</li>
         </ul>
       </div>
     </div>
-  </section>
 
-  <!-- ── ONDA cream-dark → navy ── -->
-  <div class="wave-divider" style="background: var(--cream-dark);">
-    <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" height="70">
-      <path d="M0,20 C200,70 500,0 720,35 C940,70 1200,10 1440,30 L1440,70 L0,70 Z" fill="#1e3a6e"/>
-    </svg>
   </div>
+</section>
 
-  <!-- ── HERRAMIENTAS & SKILLS ── -->
-  <section class="tools-section reveal">
-    <div class="section-title">Herramientas</div>
-    <div class="tools-grid">
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">CapCut</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Adobe Suite</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Canva</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Figma</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Meta Ads</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Metricool</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Notion</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Power BI</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Excel</span></div>
-      <div class="tool-card"><div class="tool-dot"></div><span class="tool-name">Google Search Console</span></div>
-          </div>
-  </section>
+<!-- ── HERRAMIENTAS ── -->
+<section class="section-editorial tools-editorial">
+  <div class="section-editorial-header reveal">
+    <span class="section-editorial-label">04</span>
+    <h2 class="section-editorial-title">Herramientas</h2>
+    <div class="section-editorial-line"></div>
+  </div>
+  <div class="tools-editorial-grid reveal">
+    <span class="tool-ed">CapCut</span>
+    <span class="tool-ed">Adobe Suite</span>
+    <span class="tool-ed">Canva</span>
+    <span class="tool-ed">Figma</span>
+    <span class="tool-ed">Meta Ads</span>
+    <span class="tool-ed">Metricool</span>
+    <span class="tool-ed">Notion</span>
+    <span class="tool-ed">Power BI</span>
+    <span class="tool-ed">Excel</span>
+    <span class="tool-ed">Google Search Console</span>
+  </div>
+</section>
 
-  <!-- ── CONTACTO ── -->
-  <div class="contact-strip reveal" id="contacto">
-    <div class="contact-left">
-      <h3>¿Trabajamos juntos?</h3>
-      <div class="contact-info">
-  <a href="mailto:rusmericardenas9@gmail.com">rusmericardenas9@gmail.com</a>
-  <span class="contact-sep">·</span>
-  <a href="https://wa.me/51950701919" target="_blank" class="contact-wsp">
-    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5 -.669 -.51 -.173 -.008 -.371 -.01 -.57 -.01 -.１９８ ０ -.５２ .０７４ -.７９２ .３７２ -.２７２ .２９７ -１.０４ １.０１６ -１.０４ ２.４７９ ０ １.４６２ １.０６５ ２.８７５ １.２１３ ３.０７４ .１４９ .１９８ ２.０９６ ３.２ ５.０７７ ４.４８７ .７０９ .３０６ １.２６２ .４８９ １.６９４ .６２５ .７１２ .２２７ １.３６ .１９５ １.８７１ .１１８ .５７１ -.０８５ １.７５８ -.７１９ ２.００６ -₁₁³ .₂₄₈ -.₆₉₄ .₂₄₈ -₁.₈₉ .₁₇₃ -₁₁³ -\.₀₇₄ -\.₁₂₄ -\.₂₇₂ -\.₁₉₈ -\.៥₇ -\.₃₄₇z"/>
-      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.532 5.862L.057 23.428a.5.5 0 0 0 .611.601l5.794-1.524A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22a9.954 9.954 0 0 1-5.388-1.576l-.362-.22-3.938 1.035 1.012-3.825-.236-.373A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-    </svg>
-    +51 950 701 919
-  </a>
-  <span class="contact-sep">·</span>
-  <span>Lima, Perú</span>
-</div>
+<!-- ── CONTACTO ── -->
+<section class="section-editorial contacto-editorial" id="contacto">
+  <div class="contacto-editorial-inner reveal">
+    <div class="contacto-left">
+      <span class="section-editorial-label">05</span>
+      <h2 class="contacto-headline">¿Trabajamos juntos?</h2>
+      <p class="contacto-sub">Estoy disponible para nuevos proyectos y colaboraciones.</p>
     </div>
-      </div>
+    <div class="contacto-right">
+      <a href="mailto:rusmericardenas9@gmail.com" class="contacto-link">rusmericardenas9@gmail.com</a>
+      <a href="https://wa.me/51950701919" target="_blank" class="contacto-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: middle; margin-right: 4px;">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        +51 950 701 919
+      </a>
+      <span class="contacto-location">Lima, Perú</span>
+    </div>
+  </div>
+</section>
 
-  <!-- ── FOOTER ── -->
-  <footer>
-    <span>© Web realizada por Rusmeri Cárdenas 2026 · Social Media Specialist · Lima, Perú</span>
-    <div class="footer-name">Rusmeri.</div>
-  </footer>
-
-</div><!-- /page-main -->
+<!-- ── FOOTER ── -->
+<footer class="footer-editorial">
+  <div class="footer-editorial-inner">
+    <span class="footer-copy">© 2026 Rusmeri Cárdenas · Social Media Specialist</span>
+    <span class="footer-brand">Rusmeri.</span>
+  </div>
+</footer>
 
 <script src="js/main.js"></script>
 <script>
@@ -320,29 +382,6 @@
       navMobileMenu.classList.remove('open');
       navOverlay.classList.remove('open');
     });
-  });
-
-  function cerrarProyecto() {
-    document.querySelectorAll('.project-page').forEach(p => p.style.display = 'none');
-    document.getElementById('page-main').style.display = 'block';
-    setTimeout(() => document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' }), 50);
-  }
-
-  document.querySelectorAll('.nav-main-link').forEach(link => {
-    link.addEventListener('click', () => {
-      const hayProyectoAbierto = [...document.querySelectorAll('.project-page')].some(p => p.style.display === 'block');
-      if (hayProyectoAbierto) {
-        document.querySelectorAll('.project-page').forEach(p => p.style.display = 'none');
-        document.getElementById('page-main').style.display = 'block';
-      }
-    });
-  });
-
-  document.getElementById('nav-logo').addEventListener('click', (e) => {
-    e.preventDefault();
-    document.querySelectorAll('.project-page').forEach(p => p.style.display = 'none');
-    document.getElementById('page-main').style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 </script>
 </body>
