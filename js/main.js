@@ -42,6 +42,11 @@ function setupCarousel(track) {
   `;
   shell.appendChild(controls);
 
+  const mobileHint = document.createElement('p');
+  mobileHint.className = 'carousel-mobile-hint';
+  mobileHint.innerHTML = '<span aria-hidden="true">↔</span> Desliza para ver más';
+  shell.appendChild(mobileHint);
+
   const previousButton = controls.querySelector('.carousel-control-prev');
   const nextButton = controls.querySelector('.carousel-control-next');
   const getStep = () => {
@@ -56,6 +61,7 @@ function setupCarousel(track) {
     previousButton.disabled = track.scrollLeft <= 1;
     nextButton.disabled = track.scrollLeft >= maxScroll;
     controls.hidden = maxScroll <= 0;
+    mobileHint.hidden = maxScroll <= 0 || track.scrollLeft > 8;
   };
 
   previousButton.addEventListener('click', () => {
@@ -70,7 +76,7 @@ function setupCarousel(track) {
   let startScrollLeft = 0;
 
   track.addEventListener('pointerdown', event => {
-    if (event.pointerType === 'mouse' && event.button !== 0) return;
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
     isDragging = true;
     startX = event.clientX;
     startScrollLeft = track.scrollLeft;
