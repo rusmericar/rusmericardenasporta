@@ -61,7 +61,7 @@ function setupCarousel(track) {
     previousButton.disabled = track.scrollLeft <= 1;
     nextButton.disabled = track.scrollLeft >= maxScroll;
     controls.hidden = maxScroll <= 0;
-    mobileHint.hidden = maxScroll <= 0 || track.scrollLeft > 8;
+    mobileHint.hidden = maxScroll <= 0 || mobileHint.dataset.dismissed === 'true';
   };
 
   previousButton.addEventListener('click', () => {
@@ -97,6 +97,12 @@ function setupCarousel(track) {
 
   track.addEventListener('pointerup', stopDragging);
   track.addEventListener('pointercancel', stopDragging);
+  track.addEventListener('pointerdown', event => {
+    if (event.pointerType === 'touch') {
+      mobileHint.dataset.dismissed = 'true';
+      updateControls();
+    }
+  }, { passive: true });
   track.addEventListener('scroll', updateControls, { passive: true });
   window.addEventListener('resize', updateControls);
   updateControls();
